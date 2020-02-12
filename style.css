@@ -1,0 +1,68 @@
+* {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 50px auto;
+}
+
+button {
+    border-radius: 4px;
+    cursor: pointer;
+    border: 3px solid rgb(71, 165, 142);
+    background: transparent;
+    position: relative;
+    padding: 0;
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 1em;
+    /*For IE*/
+  }
+  button > span {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(90deg, #fff 50%, rgb(71, 165, 142) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgb(71, 165, 142) 50%, transparent 50%);
+    z-index: -1;
+  }
+  
+  button > span,
+  button:after {
+    background-size: 300%;
+    background-position: 100%;
+    transition: 1s, font-size 0.2s;
+  }
+  
+  button:hover > span,
+  button:hover:after {
+    background-position: 0;
+    font-size: 1em;
+  
+    color: rgb(71, 165, 142);
+    /*For IE*/
+  }
+  
+
